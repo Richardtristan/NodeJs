@@ -1,0 +1,94 @@
+{
+  "name": "richardtristan",
+  "version": "5.9.0",
+  "description": "Personal npm card for tristan (@Becode)",
+  "main": "src/card.js",
+  "unpkg": "index.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Richardtristan/.git"
+  },
+  "scripts": {
+    "prepare": "node src/htmlify"
+  },
+  "bin": {
+    "nodejs": "bin/index.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "index.html"
+  ],
+  "keywords": [
+    "card",
+    "npm",
+    "npm card",
+    "npx",
+    "npx card",
+    "business card"
+  ],
+  "author": "tristan",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "ansi-to-html": "^0.6.9",
+    "babel-loader": "^8.0.4",
+    "boxen": "^5.1.2",
+    "chalk": "^2.4.1",
+    "chalker": "^1.2.0",
+    "lodash.get": "^4.4.2",
+    "webpack": "^5.53.0",
+    "webpack-bundle-analyzer": "^3.0.3",
+    "webpack-cli": "^3.1.2"
+  },
+  "myCard": {
+    "info": {
+      "name": "tristan",
+      "handle": "Becode",
+      "npm": "tristrii",
+      "github": "Richardtristan",
+      "linkedin": "richard-tristan-webdev",
+      "work": "Junior WEB dev"
+    },
+    "data": [
+      "          <white>{{name}}</><green> / </><cyan>{{handle}}</>",
+      "",
+      {
+        "label": "<blue>Work</>",
+        "text": "{{work}}"
+      },
+      "",
+      {
+        "label": "Twitter",
+        "text": "https://twitter.com/<cyan>{{twitter}}</>",
+        "when": "{{twitter}}"
+      },
+      {
+        "label": "npm",
+        "text": "https://www.npmjs.com/<red>~{{npm}}</>",
+        "when": "{{npm}}"
+      },
+      {
+        "label": "GitHub",
+        "text": "https://github.com/<green>{{github}}</>",
+        "when": "{{github}}"
+      },
+      {
+        "label": "LinkedIn",
+        "text": "https://www.linkedin.com/in/<blue>{{linkedin}}</>",
+        "when": "{{linkedin}}"
+      },
+      {
+        "label": "Web",
+        "text": "<cyan>{{web}}</>",
+        "when": "{{web}}"
+      },
+      "",
+      {
+        "label": "Card",
+        "text": "<red>npx</> {{_packageName}}"
+      }
+    ]
+  }
+}
